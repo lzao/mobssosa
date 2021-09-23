@@ -2,6 +2,8 @@ FROM node:14-alpine
 
 WORKDIR /var/www/nestjs/mobssosa
 
+COPY . .
+
 RUN npm i -g @nestjs/cli
 
 # RUN yarn add @nestjs/typeorm typeorm mysql2

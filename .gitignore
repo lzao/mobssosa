@@ -37,6 +37,7 @@ lerna-debug.log*
 # Environment
 .env
 
+# docker
 docker/data/mysql
 docker/data/pw
 docker/data/secrets/mysql-root

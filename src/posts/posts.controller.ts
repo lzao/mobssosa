@@ -1,5 +1,5 @@
 import { Body, ClassSerializerInterceptor, Controller, Get, Post, Put, Query, UseInterceptors } from '@nestjs/common';
-import { CreatePostsInput } from './dto/create-posts.dto';
+import { CreatePostDto } from './dto/create-posts.dto';
 import { PostsService } from './services/posts.service';
 
 @Controller('posts')
@@ -16,7 +16,7 @@ export class PostsController {
     }
 
     @Put()
-    async createPost(@Body() post: CreatePostsInput) {
+    async createPost(@Body() post: CreatePostDto) {
         console.log(post)
         return this.postsService.createPost(post)
     }

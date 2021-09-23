@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { In, Repository } from 'typeorm';
-import { CreatePostsInput } from '../dto/create-posts.dto';
+import { CreatePostDto } from '../dto/create-posts.dto';
 import { Posts } from '../entities/posts.entity';
 import { PostsSearchService } from './posts-search.service';
 
@@ -9,7 +9,7 @@ import { PostsSearchService } from './posts-search.service';
 export class PostsService {
     constructor(@InjectRepository(Posts) private postsRepository: Repository<Posts>, private postsSearchService: PostsSearchService) {}
     
-    async createPost(post: CreatePostsInput) {
+    async createPost(post: CreatePostDto) {
         console.log(post)
         const newPost = await this.postsRepository.create({
             ...post
