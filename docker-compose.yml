@@ -9,6 +9,7 @@ services:
       - .:/var/www/nestjs/mobssosa
     ports: 
       - 3000:3000
+      - 9229:9229
     tty: true
     networks: 
       - mobssosa-networks

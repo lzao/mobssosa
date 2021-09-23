@@ -14,8 +14,6 @@ RUN npm i -g @nestjs/cli
 
 # RUN yarn add class-validator class-transformer
 
-# RUN yarn add @nestjs/graphql graphql apollo-server-express
-
 RUN yarn install
 
 EXPOSE 3000
